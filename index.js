@@ -7,3 +7,5 @@ const hideH1 = () => {
     buttonElement.textContent = isTextVisible ? 'Hide of text' : 'Show of text';
     isTextVisible = !isTextVisible;
 }
+
+// Types
