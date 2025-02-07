@@ -18,10 +18,7 @@ console.log("\n\n3.2");
 const str1 = prompt("Введіть перший рядок:");
 const str2 = prompt("Введіть другий рядок:");
 const str3 = prompt("Введіть третій рядок:");
-const array = [str1, str2, str3]
-    .map(value => ({ value, sort: Math.random() })) // Create array of object
-    .sort((a, b) => a.sort - b.sort) // Sort by random value
-    .map(obj => obj.value); // Remove random value
+const array = [str1, str2, str3].sort(() => Math.random() - 0.5);
 
 console.log(`${array[0]}\n${array[1]}\n${array[2]}`);
 
