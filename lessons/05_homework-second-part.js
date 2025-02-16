@@ -1,3 +1,4 @@
 window.addEventListener('load', () => {
-    alert(123);
+    const userName = prompt('Please input user name');
+    alert(`Hello, ${userName}! How are you?`)
 });
