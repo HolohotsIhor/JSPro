@@ -9,8 +9,6 @@ const rootEl4 = document.getElementById('root4');
 const rootEl5 = document.getElementById('root5');
 const rootEl6 = document.getElementById('root6');
 
-const writeMessage = (message, root) => root.innerHTML = message;
-
 // Check 2 values
 const checkTwoValue = (first, second, unit, root) => {
     if (isNaN(first) || isNaN(second)) {
