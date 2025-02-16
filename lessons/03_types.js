@@ -4,6 +4,8 @@ console.log("undefined:", typeof undefined);
 console.log("null:", typeof null); // "object" (из-за бага в JS)
 console.log("boolean:", typeof true);
 console.log("number:", typeof 42);
+console.log(typeof NaN);
+console.log(typeof Infinity);
 console.log("bigint:", typeof 9007199254740991n);
 console.log("string:", typeof "Hello, JS!");
 console.log("symbol:", typeof Symbol("id"));

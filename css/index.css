@@ -1,0 +1,21 @@
+.answer__group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.answer__result {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.root {
+    margin-left: 10px;
+}
+
+.answer:not(:last-child) {
+    margin-bottom: 40px;
+    border-bottom: solid 1px #383838;
+    padding-bottom: 20px;
+}

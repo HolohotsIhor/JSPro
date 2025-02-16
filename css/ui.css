@@ -1,0 +1,144 @@
+body {
+    background-color: #444442;
+    padding-top: 85px;
+    color: white;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    font-weight: 500;
+}
+
+/* ///// buttons /////*/
+.button {
+    color: #2d2d2d;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(255 255 255);
+    background: linear-gradient(0deg, rgb(255 255 255) 0%, rgb(206 206 206) 100%);
+    text-align: center;
+}
+
+.button:hover {
+    color: white;
+    background: transparent;
+    box-shadow:none;
+}
+
+.button:before,
+.button:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1px;
+    width: 0;
+    background: #fff;
+    box-shadow:
+            -1px -1px 5px 0px #6b6b6b,
+            7px 7px 20px 0px #6b6b6b,
+            4px 4px 5px 0px #6b6b6b;
+    transition:400ms ease all;
+}
+
+.button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+
+.button:hover:before,
+.button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+
+/* ///// inputs /////*/
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: .3rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+}
+
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide {
+    width: 300px;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .styled-input.wide {
+        width: 650px;
+    }
+}
+
+input {
+    padding: 40px 30px 20px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+    max-width: 100%;
+}
+
+
+input:focus {
+    outline: 0;
+}
+
+input:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}

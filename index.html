@@ -6,13 +6,122 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="container">
-        <h1>Fill in all fields:</h1>
-    </div>
+        <h2 class="title">Homework from presentation</h2>
+        <!-- Task 1 -->
+        <div class="answer">
+            <div class="answer__group">
+                <strong>1. First/second number: </strong>
+                <div class="styled-input wide">
+                    <input type="text" id="first-number" class="input" required>
+                    <label>Please input 1st number:</label>
+                </div>
+                <div class="styled-input wide">
+                    <input type="text" id="second-number" class="input" required>
+                    <label>Please input 2nd number:</label>
+                </div>
+            </div>
+            <div class="answer__result"><strong>Answer:</strong><div id="root" class="root">________</div></div>
+            <span class="button" id="button1">Get answer</span>
+        </div>
 
-    <script src="./lessons/03_types.js"></script>
+        <!-- Task 2 -->
+        <div class="answer">
+            <div class="answer__group">
+                <strong>2. Km/ml: </strong>
+                <div class="styled-input wide">
+                    <input type="text" id="km-value" class="input" required>
+                    <label>Please input 1st number:</label>
+                </div>
+                <div class="styled-input wide">
+                    <input type="text" id="ml-value" class="input" required>
+                    <label>Please input 2nd number:</label>
+                </div>
+            </div>
+            <div class="answer__result"><strong>Answer:</strong><div id="root1" class="root">________</div></div>
+            <span class="button" id="button2">Get answer</span>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="answer">
+            <div class="answer__group">
+                <strong>3. a/b or b/a: </strong>
+                <div class="styled-input wide">
+                    <input type="text" id="a-number" class="input" required>
+                    <label>Please input "a" number:</label>
+                </div>
+                <div class="styled-input wide">
+                    <input type="text" id="b-number" class="input" required>
+                    <label>Please input "b" number:</label>
+                </div>
+            </div>
+            <div class="answer__result"><strong>Answer:</strong><div id="root2" class="root">________</div></div>
+            <span class="button" id="button3">Get answer</span>
+        </div>
+
+        <!-- Task 4 -->
+        <div class="answer">
+            <div class="answer__group">
+                <strong>4.Last number: </strong>
+                <div class="styled-input wide">
+                    <input type="text" id="last-number" class="input" required>
+                    <label>Please input a number:</label>
+                </div>
+            </div>
+            <div class="answer__result"><strong>Answer:</strong><div id="root3" class="root">________</div></div>
+            <span class="button" id="button4">Get answer</span>
+        </div>
+
+        <!-- Task 5 -->
+        <div class="answer">
+            <div class="answer__group">
+                <strong>5. Which number is biggest?: </strong>
+                <div class="styled-input wide">
+                    <input type="text" id="some-number" class="input" required>
+                    <label>Please input a number:</label>
+                </div>
+            </div>
+            <div class="answer__result"><strong>Answer:</strong><div id="root4" class="root">________</div></div>
+            <span class="button" id="button5">Get answer</span>
+        </div>
+
+        <!-- Task 6 -->
+        <div class="answer">
+            <div class="answer__group">
+                <strong>6. Three-digit number: </strong>
+                <div class="styled-input wide">
+                    <input type="text" id="three-digit-number" class="input" required>
+                    <label>Please input a number:</label>
+                </div>
+            </div>
+            <div class="answer__result"><strong>Answer:</strong><div id="root5" class="root">________</div></div>
+            <span class="button" id="button6">Get answer</span>
+        </div>
+
+        <!-- Task 7 -->
+        <div class="answer">
+            <div class="answer__group">
+                <strong>6. Mirror number: </strong>
+                <div class="styled-input wide">
+                    <input type="text" id="mirror-number" class="input" required>
+                    <label>Please input a number:</label>
+                </div>
+            </div>
+            <div class="answer__result"><strong>Answer:</strong><div id="root6" class="root">________</div></div>
+            <span class="button" id="button7">Get answer</span>
+        </div>
+    </div>
+<!--    <script src="./lessons/03_types.js"></script>-->
+<!--    <script src="./lessons/04_bonus.js"></script>-->
+<!--    <script src="./lessons/05_operators.js"></script>-->
+    <script src="./lessons/05_homework.js"></script>
 </body>
 </html>
