@@ -25,8 +25,8 @@ window.addEventListener('load', () => {
     const button1 = document.getElementById('button1');
 
     // 1
-    // const userName = prompt('Please input user name');
-    // alert(`Hello, ${userName}! How are you?`)
+    const userName = prompt('Please input user name');
+    alert(`Hello, ${userName}! How are you?`);
 
     // 2
     button1.addEventListener('click',  handleTask2);
