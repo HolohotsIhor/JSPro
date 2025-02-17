@@ -1,6 +1,42 @@
 const rootEl = document.getElementById('root');
+const rootE1 = document.getElementById('roo1');
+const currentYear = new Date().getFullYear();
+const locations = [
+    {
+        capital: 'Київ',
+        country: 'Україна',
+    },
+    {
+        capital: 'Вашингтон',
+        country: 'США',
+    },
+    {
+        capital: 'Лондон',
+        country: 'Великобританії',
+    },
+];
+const sports = [
+    {
+        sport: 'Бокс',
+        person: 'Майк Тайсон',
+    },
+    {
+        sport: 'Футбол',
+        person: 'Андрій Шевченко',
+    },
+    {
+        sport: 'Баскетбол',
+        person: 'Майкл Джордан',
+    },
+];
 
-//***** 2 *****//
+//***** 4.1 *****//
+const handleTask1 = () => {
+    const userName = prompt('Please input user name');
+    alert(`Hello, ${userName}! How are you?`);
+}
+
+//***** 4.2 *****//
 const handleTask2 = () => {
     const inputValue = document.getElementById('three-digit-number').value;
     const number = parseInt(inputValue);
@@ -21,13 +57,55 @@ const handleTask2 = () => {
     } else writeMessage(`The number is not three digits`, rootEl);
 }
 
+const handleTask3 = () => {
+    const birthYear = parseInt(document.getElementById('birth-year').value);
+    const city = document.getElementById('city').value;
+    const sport = document.getElementById('sport').value;
+    let message = '';
+    let isCapital = false;
+    let isSport = false;
+
+    message += `Твій вік: ${currentYear - birthYear} рік/ів. `
+
+    locations.forEach(location => {
+        if (location.capital === city) {
+            message += `Ти живеш у столиці ${location.country}. `
+            isCapital = true;
+        }
+    })
+    if (isCapital === false) message += `Ти живеш у місті ${city}. `
+
+    sports.forEach(item => {
+        if (item.sport === sport) {
+            message += `Круто! Хочеш стати ${item.person}?. `
+            isSport = true;
+        }
+    })
+    if (isSport === false) message += `Виду спорту немає у списку(Обери: Бокс, Футбол або Баскетбол). `
+
+    alert(message);
+}
+
+const handleTask4 = () => {
+    const birthYear = document.getElementById('birth-year').value;
+    const city = document.getElementById('city').value;
+    const sport = document.getElementById('sport').value;
+    let message = '';
+
+    if (birthYear === '') message += `Ви не захотіли вводити дату народження. `;
+    if (city === '') message += `Ви не захотіли вводити місто. `;
+    if (sport === '') message += `Ви не захотіли вводити вид спорту. `;
+
+    alert(message);
+}
+
 window.addEventListener('load', () => {
     const button1 = document.getElementById('button1');
+    const button2 = document.getElementById('button2');
+    const button3 = document.getElementById('button3');
 
-    // 1
-    const userName = prompt('Please input user name');
-    alert(`Hello, ${userName}! How are you?`);
-
-    // 2
+    // handleTask1();
     button1.addEventListener('click',  handleTask2);
+    button2.addEventListener('click',  handleTask3);
+    button3.addEventListener('click',  handleTask4);
 });
