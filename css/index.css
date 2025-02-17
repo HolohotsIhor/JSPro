@@ -1,3 +1,13 @@
+.answer {
+    width: 300px;
+}
+
+@media (min-width: 768px) {
+    .answer {
+        width: 650px;
+    }
+}
+
 .answer__group {
     display: flex;
     flex-wrap: wrap;

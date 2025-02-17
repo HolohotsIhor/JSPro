@@ -99,13 +99,44 @@ const handleTask4 = () => {
     alert(message);
 }
 
+const handleTask5 = () => {
+    let numOrStr = prompt('input number or string');
+    console.log(numOrStr)
+
+    // if (numOrStr === null) {
+    //     console.log('ви скасували')
+    // } else if (numOrStr.trim() === '') {
+    //     console.log('Empty String');
+    // } else if (isNaN(+numOrStr)) {
+    //     console.log(' number is Ba_NaN')
+    // } else {
+    //     console.log('OK!')
+    // }
+
+    switch(true) {
+        case numOrStr === null:
+            console.log('ви скасували');
+            break;
+        case numOrStr.trim() === '':
+            console.log('Empty String');
+            break;
+        case isNaN(+numOrStr):
+            console.log('number is Ba_NaN');
+            break;
+        default:
+            console.log('OK!');
+    }
+}
+
 window.addEventListener('load', () => {
     const button1 = document.getElementById('button1');
     const button2 = document.getElementById('button2');
     const button3 = document.getElementById('button3');
+    const button4 = document.getElementById('button4');
 
     // handleTask1();
     button1.addEventListener('click',  handleTask2);
     button2.addEventListener('click',  handleTask3);
     button3.addEventListener('click',  handleTask4);
+    button4.addEventListener('click',  handleTask5);
 });
