@@ -134,7 +134,7 @@ window.addEventListener('load', () => {
     const button3 = document.getElementById('button3');
     const button4 = document.getElementById('button4');
 
-    // handleTask1();
+    handleTask1();
     button1.addEventListener('click',  handleTask2);
     button2.addEventListener('click',  handleTask3);
     button3.addEventListener('click',  handleTask4);
