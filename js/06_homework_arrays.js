@@ -34,7 +34,7 @@ const handleTask2 = (array) => {
 const removeElement = (array, item) => {
     const result = array.filter(el => el !== item);
 
-    console.log(result);
+    console.log(`Filtered Array: ${result.join(', ')}`);
     writeMessage(`Filtered Array: ${result.join(', ')}`, rootE3);
 }
 
