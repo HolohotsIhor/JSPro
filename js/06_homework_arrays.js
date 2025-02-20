@@ -40,7 +40,7 @@ const removeElement = (array, item) => {
 
 window.addEventListener('load', () => {
     const button = document.getElementById('button');
-    const someArray = [123, "", 15, 'asdasd'];
+    const someArray = [123, 'you', 15, 'asdasd'];
     const item = 13;
 
     button.addEventListener('click',  handleTask1);
