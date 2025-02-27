@@ -1,4 +1,4 @@
-let ladder = {
+const ladder = {
     counter: 0,
     up: function () {
         this.counter++;

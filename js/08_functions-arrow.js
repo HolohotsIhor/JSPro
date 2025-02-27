@@ -68,3 +68,5 @@ let secondStep = firstStep(7);
 //...
 let thirdStep = secondStep(1);
 console.log(thirdStep);
+
+// Рекурсія. Функція звертається сама до себе. Може заходити глибше і глибше в рекурсію.
