@@ -70,3 +70,39 @@ let thirdStep = secondStep(1);
 console.log(thirdStep);
 
 // Рекурсія. Функція звертається сама до себе. Може заходити глибше і глибше в рекурсію.
+function factorial(value) {
+    if (value > 1) {
+        return value * factorial(value - 1);
+    }
+
+    return value;
+}
+
+console.log(factorial(3));
+
+/////
+const youObj = {
+    id: 1,
+    name: 'Boss',
+    employees: [{
+        id: 2,
+        name: 'CTO',
+        employees: [
+            {
+                id: 3,
+                name: 'Dev1'
+            },
+            {
+                id: 4,
+                name: 'Dev2'
+            },
+        ]
+        },
+        {
+            id: 5,
+            name: 'Architect'
+        }
+    ]
+}
+
+// Output. Name: ID. Умова для рекурсії, якщо в масиві є данні
