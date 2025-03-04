@@ -1,80 +1,93 @@
 // 09. Recursion
 const company = {
     id: 1,
-    title: 'Boss',
+    name: 'Boss',
+    salary: 10000,
     employees: [
         {
             id: 2,
-            title: 'Chief Tech Officer',
+            name: 'Chief Tech Officer',
+            salary: 8000,
             employees: [
-                { id: 3, title: 'Architect' },
+                { id: 3, name: 'Architect', salary: 6000 },
                 {
                     id: 4,
-                    title: 'Architect',
+                    name: 'Architect',
+                    salary: 5500,
                     employees: [
                         {
                             id: 6,
-                            title: 'Senior',
+                            name: 'Senior',
+                            salary: 5000,
                         },
                         {
                             id: 7,
-                            title: 'Senior',
+                            name: 'Senior',
+                            salary: 4500,
                         },
                         {
                             id: 8,
-                            title: 'Senior',
+                            name: 'Senior',
+                            salary: 4500,
                             employees: [
-                                { id: 9, title: 'Middle' }
+                                { id: 9, name: 'Middle', salary: 5000 }
                             ]
                         },
                     ]
                 },
-                { id: 5, title: 'Architect' }
+                { id: 5, name: 'Architect', salary: 6500 }
             ]
         },
         {
             id: 13,
-            title: 'Chief Finance Officer',
+            name: 'Chief Finance Officer',
+            salary: 7500,
             employees: [
-                { id: 17, title: 'Accountant' },
+                { id: 17, name: 'Accountant', salary: 3500 },
                 {
                     id: 14,
-                    title: 'Senior Accountant',
+                    name: 'Senior Accountant',
+                    salary: 4500,
                     contractors: [
                         {
                             id: 16,
-                            title: 'Senior',
+                            name: 'Senior',
+                            salary: 4500,
                         },
                         {
                             id: 117,
-                            title: 'Senior',
+                            name: 'Senior',
+                            salary: 5500,
                         },
                         {
                             id: 18,
-                            title: 'Senior',
+                            name: 'Senior',
+                            salary: 5500,
                             bezdelniki: [
-                                { id: 19, title: 'Middle' }
+                                { id: 19, name: 'Middle', salary: 2500, }
                             ]
                         },
                     ]
                 },
-                { id: 5, title: 'Architect' }
+                { id: 5, name: 'Architect', salary: 6500 }
             ]
         }
     ],
     contractors: [
-        { id: 1232, title: 'hello, world man' }
+        { id: 1232, name: 'hello, world man' }
     ],
     testKey: 'testValue',
     testArray: [
-        { id: 111, title: 'Test array title' },
-        { id: 222, title: 'Test array title 2' },
+        { id: 111, name: 'Test array name' },
+        { id: 222, name: 'Test array name 2', salary: 10000 },
     ],
 };
+let salarySum = 0;
+let dynamicSalarySum = 0;
 
 // Basic data
 const showObj = (obj) => {
-    console.log(`${obj.id} - ${obj.title}`);
+    if (obj.salary > 0) salarySum += obj.salary
 
     if (!obj.employees || !obj.employees.length) return;
 
@@ -83,7 +96,7 @@ const showObj = (obj) => {
 
 // Dynamic data
 const showObjDynamic = (obj) => {
-    console.log(`${obj.id} - ${obj.title}`);
+    if (obj.salary > 0) dynamicSalarySum += obj.salary
 
     const keys = Object.keys(obj);
 
@@ -94,8 +107,8 @@ const showObjDynamic = (obj) => {
     })
 }
 
-console.log('Basic data parse: ')
 showObj(company);
+console.log(`Basic data salary: ${salarySum}`);
 
-console.log('\n\nDynamic data parse: ')
 showObjDynamic(company);
+console.log(`\n\nDynamic data parse salary: ${dynamicSalarySum}`);
