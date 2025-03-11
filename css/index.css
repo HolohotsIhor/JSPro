@@ -29,3 +29,45 @@
     border-bottom: solid 1px #383838;
     padding-bottom: 20px;
 }
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.table__item {
+    border: solid 1px white;
+    text-align: center;
+    padding: 1rem;
+    transition: .2s;
+}
+
+.table__item:not(.table__item--dynamic) {
+    background-color: #666;
+}
+
+.table__item--dynamic {
+    cursor: pointer;
+}
+
+.table__item--dynamic:hover {
+    background-color: #666;
+}
+
+.table__item.is-hovered {
+    background-color: #444442;
+}
+
+.text {
+    margin-bottom: 1rem;
+}
+
+.text--red {
+    color: red;
+}
+
+.image {
+    object-fit: cover;
+}
