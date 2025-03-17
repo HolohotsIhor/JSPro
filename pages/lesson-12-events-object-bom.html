@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ui.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .mart {
+            display: flex;
+            gap: 20px;
+        }
+
+        .mart > div {
+            border: solid 1px white;
+            min-height: 200px;
+            min-width: 100px;
+        }
+
+        .mart__category-item {
+            cursor: pointer;
+        }
+
+        .mart__category-item:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>12. BOM - browser object model. navigator, location, history, screen</h1>
+        <div>
+            <p class="parent">
+                <button id="btn1" data-type="open">Open window</button>
+                <button id="btn2" data-type="edit">Edit</button>
+                <button id="btn3" data-type="add">Add</button>
+            </p>
+        </div>
+        <button id="btn">Click me</button>
+
+        <div class="mart">
+            <div class="mart__categories">
+                <h2>Categories</h2>
+                <div></div>
+            </div>
+            <div class="mart__products">
+                <h2>Products</h2>
+            </div>
+            <div class="mart__information">
+                <h2>Information</h2>
+            </div>
+        </div>
+    </div>
+    <script src="../js/12_dom-event-object-events-bom.js"></script>
+</body>
+</html>

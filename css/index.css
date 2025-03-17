@@ -14,10 +14,22 @@
     flex-direction: column;
 }
 
+.answer__group--input-button {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
 .answer__result {
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
+}
+
+.answer__result--buttons {
+    gap: 16px;
 }
 
 .root {
@@ -70,4 +82,19 @@
 
 .image {
     object-fit: cover;
+}
+
+.list {
+    list-style: none;
+}
+
+.list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.list__item:not(U&:last-child) {
+    margin-bottom: 16px;
 }

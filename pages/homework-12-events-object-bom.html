@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ui.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="answer">
+            <div class="answer__group">
+                <strong>ДЗ 12.1. Переход на сторінку</strong>
+            </div>
+            <div class="answer__result answer__result--buttons">
+                <span class="button" id="button1">Ввести url</span>
+                <span class="button" id="button2">Перейти по url</span>
+            </div>
+        </div>
+
+        <div class="answer">
+            <div class="answer__group">
+                <strong>ДЗ 12.2. Використання подій. Делегування</strong>
+            </div>
+            <div class="answer__result answer__result--buttons js-buttons-trigger">
+                <span class="button" data-type="button1" id="button3">Button 1</span>
+                <span class="button" data-type="button2" id="button4">Button 2</span>
+                <span class="button" data-type="button3" id="button5">Button 3</span>
+            </div>
+            <div class="answer__result"><strong>Answer:</strong><div id="root" class="root">________</div></div>
+        </div>
+
+        <div class="answer">
+            <div class="answer__group answer__group--input-button">
+                <strong>ДЗ 12.3. TODO лист</strong>
+                <div class="styled-input wide">
+                    <input type="text" id="new-todo-item" class="input" required>
+                    <label>Додати нове завдання:</label>
+                </div>
+                <button class="button js-add-item">Додати</button>
+            </div>
+            <div class="answer__result answer__result--buttons">
+                <ul class="list js-todo-list">
+                    <li class="list__item"><span class="list__title">Завдання 1</span><button class="button">Видалити</button></li>
+                    <li class="list__item"><span class="list__title">Завдання 2</span><button class="button">Видалити</button></li>
+                    <li class="list__item"><span class="list__title">Завдання 3</span><button class="button">Видалити</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/helpers/index.js"></script>
+    <script src="../js/12_homework-event-object-events-bom.js"></script>
+</body>
+</html>
