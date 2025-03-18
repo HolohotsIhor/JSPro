@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 13</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ui.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>13. Forms</h1>
+<!--        <form name="signin" action="">-->
+<!--            <div class="styled-input wide">-->
+<!--                <input type="text" name="login" placeholder="Login" class="input" value="qwerty">-->
+<!--                <label>Login:</label>-->
+<!--            </div>-->
+
+<!--            <div class="styled-input wide">-->
+<!--                <input type="password" name="password" placeholder="Password">-->
+<!--                <label>Login:</label>-->
+<!--            </div>-->
+<!--            <p>-->
+<!--                Gender: <br />-->
+<!--                <input type="radio" name="gender" value="M"> Male-->
+<!--                <input type="radio" name="gender" value="F"> Female-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                Skills: <br />-->
+<!--                <input type="checkbox" checked name="skills" value="football"> Football <br />-->
+<!--                <input type="checkbox" name="skills" value="box"> Box <br />-->
+<!--                <input type="checkbox" name="skills" value="driving"> Driving <br />-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <input type="date">-->
+<!--                <input type="number" placeholder="Number">-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <select name="city">-->
+<!--                    <option value="Kiev">Kiev</option>-->
+<!--                    <option value="LA">Los Angeles</option>-->
+<!--                </select>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <input type="textarea">-->
+<!--            </p>-->
+<!--            <p>-->
+<!--&lt;!&ndash;                <input type="button" value="Click me">&ndash;&gt;-->
+<!--                <button type="button" class="button js-form-button">Button</button>-->
+<!--&lt;!&ndash;                <button type="reset" class="button">Reset</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                <button type="submit" class="button">Submit</button>&ndash;&gt;-->
+<!--                // ?login=qwerty&password=&skills=football - Значеня з value-->
+<!--            </p>-->
+<!--        </form>-->
+
+        <form name="registration">
+            <div class="styled-input wide">
+                <input type="text" name="username" class="input" required>
+                <label>Name:</label>
+            </div>
+            <div class="styled-input wide">
+                <input type="text" name="lastname" class="input" required>
+                <label>Lastname:</label>
+            </div>
+            <div class="styled-input wide">
+                <input type="date" name="birth" class="input input--focused" required>
+                <label>Date of Birthday:</label>
+            </div>
+            <div class="styled-input wide styled-input--radio">
+                <label>Gender:</label>
+                <span><input name="gender" type="radio" value="M"> M</span>
+                <span><input name="gender" type="radio" value="F"> F</span>
+            </div>
+            <div class="styled-input wide">
+                <select name="city" name="city">
+                    <option value="selectCity">Select you city</option>
+                    <option value="selectCity">Kiev</option>
+                    <option value="selectCity">Kremenchuk</option>
+                </select>
+            </div>
+            <div class="styled-input wide">
+                <input name="address" type="textarea" placeholder="Input you address">
+            </div>
+            <div class="styled-input wide styled-input--radio">
+                <span><input name="languages" type="checkbox" value="ua"> Ukrainian</span>
+                <span><input name="languages" type="checkbox" value="en"> English</span>
+            </div>
+            <button type="button" name="saveButton" class="button js-save-button">Save</button>
+        </form>
+
+    </div>
+    <script src="../js/13_forms-regulars.js"></script>
+</body>
+</html>

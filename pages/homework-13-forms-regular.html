@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ui.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        @media (min-width: 768px) {
+            .styled-input:nth-child(n + 1):nth-child(-n + 6) {
+                width: 49%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="answer">
+            <div class="answer__group">
+                <strong>ДЗ 13.1. Валідація з RegEx</strong>
+            </div>
+            <div class="answer__result answer__result--buttons">
+                <form name="formValidation" class="form" action="#">
+                    <div class="styled-input wide">
+                        <input type="text" name="firstname" class="input" tabindex="0" required>
+                        <label>Name:</label>
+                    </div>
+                    <div class="styled-input wide">
+                        <input type="text" name="lastname" class="input" tabindex="0" required>
+                        <label>Lastname:</label>
+                    </div>
+                    <div class="styled-input wide">
+                        <input type="email" name="email" class="input" tabindex="0" required>
+                        <label>Email:</label>
+                    </div>
+                    <div class="styled-input wide">
+                        <input type="number" name="phone" class="input" tabindex="0" required>
+                        <label>Phone number:</label>
+                    </div>
+                    <div class="styled-input wide">
+                        <select name="city" class="select input" tabindex="0">
+                            <option value="-1">Please choose you city</option>
+                            <option value="kiev">Kiev</option>
+                            <option value="kremenchuk">Kremenchuk</option>
+                            <option value="odessa">Odessa</option>
+                        </select>
+                    </div>
+                    <div class="styled-input wide styled-input--radio">
+                        <span>Gender:</span>
+                        <div class="radio-group">
+                            <span><input name="gender" id="male" type="radio" value="M"><label for="male">M</label></span>
+                            <span><input name="gender"  id="female" type="radio" value="F"><label for="female">F</label></span>
+                        </div>
+                    </div>
+                    <div class="styled-input wide styled-input--radio">
+                        <span>Your languages:</span>
+                        <div class="radio-group">
+                            <span><input name="languages" type="checkbox" id="ukrainian" value="ukrainian"><label for="ukrainian">Ukrainian</label></span>
+                            <span><input name="languages" type="checkbox" id="english" value="english"><label for="english">English</label></span>
+                            <span><input name="languages" type="checkbox" id="spanish" value="spanish"><label for="spanish">Spanish</label></span>
+                            <span><input name="languages" type="checkbox" id="arabian" value="arabian"><label for="arabian">Arabian</label></span>
+                        </div>
+                    </div>
+                    <div class="styled-input wide">
+                        <textarea name="message" class="input" tabindex="0" required></textarea>
+                        <label>Message:</label>
+                    </div>
+                    <div class="styled-input wide">
+                        <button class="button js-form-button" type="button" tabindex="0">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/13_homework-form-regular.js"></script>
+</body>
+</html>
