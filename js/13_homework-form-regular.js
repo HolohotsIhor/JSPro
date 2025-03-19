@@ -44,7 +44,6 @@ const initForm = () => {
         const message = formElements.message.value;
         let formData = {}
 
-        isValid = true;
         removeErrors(document.querySelectorAll('.error-message'));
 
         for (let i = 0; i < formElements.languages.length; i++) if (formElements.languages[i].checked) languages.push(formElements.languages[i].value);
@@ -58,7 +57,7 @@ const initForm = () => {
         languages.length > 0 ? formData = { ...formData, languages } : setError('languages-parent');
         message ? formData = { ...formData, message } : setError('message-parent');
 
-        isValid ? showValidData(form, formData) : console.log('false valid');
+        isValid ? showValidData(form, formData) : isValid = true;
     })
 }
 
