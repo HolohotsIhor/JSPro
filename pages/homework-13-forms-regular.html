@@ -27,24 +27,24 @@
                 <strong>ДЗ 13.1. Валідація з RegEx</strong>
             </div>
             <div class="answer__result answer__result--buttons">
-                <form name="formValidation" class="form" action="#">
-                    <div class="styled-input wide">
+                <form id="formValidation" name="formValidation" class="form" action="#">
+                    <div class="styled-input wide" id="firstname-parent">
                         <input type="text" name="firstname" class="input" tabindex="0" required>
                         <label>Name:</label>
                     </div>
-                    <div class="styled-input wide">
+                    <div class="styled-input wide" id="lastname-parent">
                         <input type="text" name="lastname" class="input" tabindex="0" required>
                         <label>Lastname:</label>
                     </div>
-                    <div class="styled-input wide">
+                    <div class="styled-input wide" id="email-parent">
                         <input type="email" name="email" class="input" tabindex="0" required>
                         <label>Email:</label>
                     </div>
-                    <div class="styled-input wide">
+                    <div class="styled-input wide" id="phone-parent">
                         <input type="number" name="phone" class="input" tabindex="0" required>
                         <label>Phone number:</label>
                     </div>
-                    <div class="styled-input wide">
+                    <div class="styled-input wide" id="city-parent">
                         <select name="city" class="select input" tabindex="0">
                             <option value="-1">Please choose you city</option>
                             <option value="kiev">Kiev</option>
@@ -52,14 +52,14 @@
                             <option value="odessa">Odessa</option>
                         </select>
                     </div>
-                    <div class="styled-input wide styled-input--radio">
+                    <div class="styled-input wide styled-input--radio" id="gender-parent">
                         <span>Gender:</span>
                         <div class="radio-group">
                             <span><input name="gender" id="male" type="radio" value="M"><label for="male">M</label></span>
                             <span><input name="gender"  id="female" type="radio" value="F"><label for="female">F</label></span>
                         </div>
                     </div>
-                    <div class="styled-input wide styled-input--radio">
+                    <div class="styled-input wide styled-input--radio" id="languages-parent">
                         <span>Your languages:</span>
                         <div class="radio-group">
                             <span><input name="languages" type="checkbox" id="ukrainian" value="ukrainian"><label for="ukrainian">Ukrainian</label></span>
@@ -68,7 +68,7 @@
                             <span><input name="languages" type="checkbox" id="arabian" value="arabian"><label for="arabian">Arabian</label></span>
                         </div>
                     </div>
-                    <div class="styled-input wide">
+                    <div class="styled-input wide" id="message-parent">
                         <textarea name="message" class="input" tabindex="0" required></textarea>
                         <label>Message:</label>
                     </div>
