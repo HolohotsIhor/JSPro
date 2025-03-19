@@ -9,9 +9,7 @@ let isValid = true;
 
 const removeErrors = (items) => {
     items.length > 0 &&
-        items.forEach(item => {
-            item.remove();
-        })
+        items.forEach(item => item.remove())
 }
 
 const setError = (parentId) => {
