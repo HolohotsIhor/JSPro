@@ -1,0 +1,1 @@
+const ACTIVE = 'is-active';
