@@ -9,6 +9,11 @@ const updateDots = (newIndex) => {
     });
 };
 
+const updateSlides = (items, oldIndex, currentIndex) => {
+    items[oldIndex]?.classList.remove(ACTIVE);
+    items[currentIndex]?.classList.add(ACTIVE);
+}
+
 const initDotsNav = (items) => {
     const parent = document.querySelector('.js-dots');
     parent.innerHTML = '';
@@ -30,11 +35,6 @@ const initDotsNav = (items) => {
         }
     });
 };
-
-const updateSlides = (items, oldIndex, currentIndex) => {
-    items[oldIndex]?.classList.remove(ACTIVE);
-    items[currentIndex]?.classList.add(ACTIVE);
-}
 
 const initSlider = () => {
     const slides = document.querySelectorAll('.slider__item');
