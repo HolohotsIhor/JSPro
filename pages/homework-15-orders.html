@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 15 | Storages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ui.css">
+    <style>
+        .shop {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .list {
+            padding: 20px 0;
+            border: solid 1px white;
+            width: 400px;
+            text-align: center;
+        }
+
+        .list.is-hidden {
+            display: none;
+        }
+
+        .list__item {
+            cursor: pointer;
+            padding: 5px 15px;
+            font-size: 14px;
+            transition: .2s;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+        }
+
+        .list__item:hover {
+            background-color: #383837;
+        }
+
+        .button  {
+            margin-left: 15px;
+            width: 80px;
+            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .button.is-hidden {
+            display: none;
+        }
+
+        .link {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My orders</h1>
+        <div class="shop">
+            <ul class="list" id="orders"></ul>
+        </div>
+        <a href="./homework-15-storages.html" class="link"><= Back to products list</a>
+    </div>
+
+    <script src="../js/helpers/market.js"></script>
+    <script src="../js/15_homework-orders.js"></script>
+</body>
+</html>
