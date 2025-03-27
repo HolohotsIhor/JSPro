@@ -16,11 +16,12 @@
             display: flex;
             gap: 20px;
             margin-top: 40px;
+            margin-bottom: 60px;
         }
 
         .list {
             padding: 20px 0;
-            border: solid 1px white;
+            border: solid 1px #656565;
             width: 220px;
             text-align: center;
         }
@@ -51,6 +52,20 @@
         .link {
             margin-top: 20px;
         }
+
+        @media (min-width: 768px) {
+            .styled-input:nth-child(n + 1):nth-child(-n + 8) {
+                width: 49%;
+            }
+        }
+
+        .styled-input {
+            max-height: 98px;
+        }
+
+        .form.is-hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -60,6 +75,60 @@
             <ul class="list" id="categories"></ul>
             <ul class="list is-hidden" id="products"></ul>
             <ul class="list is-hidden" id="mart"><button id="js-by-product" class="button" type="button" tabindex="0">By product</button></ul>
+        </div>
+        <div class="answer__result answer__result--buttons">
+            <form id="formValidation" name="formValidation" class="form is-hidden" action="#">
+                <div class="styled-input wide" id="firstname-parent">
+                    <input type="text" name="firstname" class="input" tabindex="0" required>
+                    <label>Name:</label>
+                </div>
+                <div class="styled-input wide" id="lastname-parent">
+                    <input type="text" name="lastname" class="input" tabindex="0" required>
+                    <label>Lastname:</label>
+                </div>
+                <div class="styled-input wide" id="email-parent">
+                    <input type="email" name="email" class="input" tabindex="0" required>
+                    <label>Email:</label>
+                </div>
+                <div class="styled-input wide" id="phone-parent">
+                    <input type="number" name="phone" class="input" tabindex="0" required>
+                    <label>Phone number:</label>
+                </div>
+                <div class="styled-input wide" id="city-parent">
+                    <select name="city" class="select input" tabindex="0">
+                        <option value="-1">Please choose you city</option>
+                        <option value="kiev">Kiev</option>
+                        <option value="kremenchuk">Kremenchuk</option>
+                        <option value="odessa">Odessa</option>
+                    </select>
+                </div>
+                <div class="styled-input wide" id="post-parent">
+                    <select name="post" class="select input" tabindex="0">
+                        <option value="-1">Please choose post number</option>
+                        <option value="1">№1</option>
+                        <option value="2">№2</option>
+                        <option value="3">№3</option>
+                        <option value="4">№4</option>
+                        <option value="5">№5</option>
+                        <option value="6">№6</option>
+                    </select>
+                </div>
+                <div class="styled-input wide styled-input--radio" id="gender-parent">
+                    <span>Delivery method:</span>
+                    <div class="radio-group">
+                        <span><input name="gender" id="male" type="radio" value="cod"><label for="male">C.O.D.</label></span>
+                        <span><input name="gender"  id="female" type="radio" value="payment"><label for="female">Payment now</label></span>
+                    </div>
+                </div>
+                <div class="styled-input wide" id="message-parent">
+                    <textarea name="message" class="input" tabindex="0" required></textarea>
+                    <label>Message:</label>
+                </div>
+                <div class="styled-input wide">
+                    <button class="button js-form-button" type="button" tabindex="0">Send</button>
+                </div>
+            </form>
+            <div id="order-details"></div>
         </div>
         <a href="./homework-15-orders.html" class="link"><= My orders</a>
     </div>

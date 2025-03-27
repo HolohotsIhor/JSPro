@@ -33,22 +33,26 @@ const showOrders = (orders, root) => {
     });
 }
 
-const getOrders = (root) => {
+const getOrders = (root, orderRoot) => {
     orders.length ? showOrders(orders, root) : root.innerHTML = 'No orders...';
 
     root.addEventListener('click', event => {
         const targetId = event.target.getAttribute(DATA_ID_ATTR);
         const targetProduct = orders.find(order => order.id === parseInt(targetId));
         if (targetProduct) {
-            alert(`Заказ: ${targetProduct.name}\nЦена: ${targetProduct.price}\nДата: ${targetProduct.date}\nОписание: ${targetProduct.description}`);
+            orderRoot.innerHTML = `<strong>Заказ</strong>: ${targetProduct.name}<br />
+                                   <strong>Цена</strong>: ${targetProduct.price}<br />
+                                   <strong>Дата</strong>: ${targetProduct.date}<br />
+                                   <strong>Описание</strong>: ${targetProduct.description}`;
         }
     });
 }
 
 const initOrders = () => {
+    const orderRoot = document.querySelector('#order-data');
     const root = document.querySelector('#orders');
     orders = JSON.parse(localStorage.getItem('orders')) || [];
-    getOrders(root);
+    getOrders(root, orderRoot);
 }
 
 document.addEventListener('DOMContentLoaded', initOrders);
