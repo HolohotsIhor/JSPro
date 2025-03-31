@@ -1,0 +1,40 @@
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 20px;
+    background-color: lightgreen;
+    color: #999;
+    transition: .2s;
+}
+
+nav ul li:hover {
+    background-color: green;
+    text-decoration: underline;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.header-row {
+    font-weight: bold;
+}
+
+.header-row > div {
+    border: solid 1px #000;
+}
+
+.root {
+    width: 100%;
+}
