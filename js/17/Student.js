@@ -14,8 +14,12 @@ function Student(name, lastname, birthYear, grades) {
         return `Student ${this.lastname} ${this.name} is ${new Date().getFullYear() - 1994}`;
     }
 
+    this.calculateGPA = function() {
+        return this.grades.reduce((acc, num) => acc += num, 0) / grades.length;
+    }
+
     this.getGPA = function() {
-        return `GPA of ${this.lastname} ${this.name} is ${this.grades.reduce((acc, num) => acc += num, 0) / grades.length}`;
+        return `GPA of ${this.lastname} ${this.name} is ${this.calculateGPA()}`;
     }
 
     this.setVisit = function (value) {
@@ -36,7 +40,7 @@ function Student(name, lastname, birthYear, grades) {
         let presentDays = 0;
         let absentDays = 0;
         let otherDays = 0;
-        let mediumGrades = this.grades.reduce((acc, num) => acc += num, 0) / grades.length;
+        let mediumGrades = this.calculateGPA();
 
         for (let i = START; i < VISIT_SIZE; i++) {
             this.visits[i]
