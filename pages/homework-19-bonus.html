@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>19. Weather and Star Wars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ui.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0c10;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #66fcf1;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .section {
+            background-color: #1f2833;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .card {
+            background-color: #2c3e50;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            background-color: #3d566e;
+        }
+
+        .load-more {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #45a29e;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .load-more:hover {
+            background-color: #66fcf1;
+            color: #0b0c10;
+        }
+
+        .container:not(.container:last-child) {
+            margin-bottom: 60px;
+        }
+
+        .loader {
+            border: 6px solid #c5c6c7;
+            border-top: 6px solid #66fcf1;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>19. AHomework. Weather and Star Wars</h1>
+        <div class="root">
+            <div id="country"></div>
+            <div id="location"></div>
+            <div id="wind"></div>
+            <div id="temp"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section" id="characters">
+            <h2>Персонажі</h2>
+            <div class="grid" id="characters-grid" data-type="characters"><div class="loader"></div></div>
+            <button class="load-more js-load-characters" tabindex=0>Завантажити ще</button>
+        </div>
+
+        <div class="section" id="planets">
+            <h2>Планети</h2>
+            <div class="grid" id="planets-grid" data-type="planets"><div class="loader"></div></div>
+            <button class="load-more js-load-planets" tabindex=0>Завантажити ще</button>
+        </div>
+
+        <div class="section" id="vehicles">
+            <h2>Транспорт</h2>
+            <div class="grid" id="vehicles-grid" data-type="vehicles"><div class="loader"></div></div>
+            <button class="load-more js-load-vehicles" tabindex=0>Завантажити ще</button>
+        </div>
+    </div>
+
+    <script src="../js/19/homework.js"></script>
+</body>
+</html>

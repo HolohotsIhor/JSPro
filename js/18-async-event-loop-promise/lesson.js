@@ -23,6 +23,20 @@ setTimeout(() => {
 //     console.log(i);
 // }
 
+let p1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 2000, 'test message');
+})
+    .then(message =>{
+        console.log(message);
+        return message;
+    })
+let p2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 4000, 'test message 2');
+})
+let p3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 1000, 'My super message!!!');
+})
+
 document.addEventListener('DOMContentLoaded', () => {
     // interval = setInterval(() => {
     //     output.innerHTML += '<span>Message</span>';
@@ -59,4 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(str);
         })
         .catch((errorMsg) => console.log(errorMsg));
+
+    // .all - Якщо данні отримуємо з різних API від беку.
+    // Product photo, info, comments, recommended products. Чекаємо на усі проміси.
+    Promise.all([p1, p2]).then(values => {
+        console.log(values);
+    })
+    Promise.allSettled([p1, p2]).then(values => {
+        console.log(values);
+    })
+
+    // .any. Бере той, який завантажився перший
+    Promise.any([p1, p2, p3]).then(result => {
+        console.log(result);
+    })
 });
