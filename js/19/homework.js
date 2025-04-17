@@ -76,10 +76,12 @@ const requestData = async (url, render, root = null) => {
     }
 }
 
-const initTrigger = () => {
-    essences.characters.trigger.addEventListener('click', () => requestData(essences.characters.url, showEssence, essences.characters.root))
-    essences.planets.trigger.addEventListener('click', () => requestData(essences.planets.url, showEssence, essences.planets.root))
-    essences.vehicles.trigger.addEventListener('click', () => requestData(essences.vehicles.url, showEssence, essences.vehicles.root))
+const initTriggers = () => {
+    Object.entries(essences).forEach(([type, essence]) => {
+        essence.trigger.addEventListener('click', () => {
+            requestData(essence.url, showEssence, essence.root);
+        });
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -87,5 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
     requestData(essences.characters.url, showEssence, essences.characters.root);
     requestData(essences.planets.url, showEssence, essences.planets.root);
     requestData(essences.vehicles.url, showEssence, essences.vehicles.root);
-    initTrigger();
+    initTriggers();
 });
